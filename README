@@ -1,0 +1,30 @@
+This is vimscript for CodeTrunk (http://code.google.com/p/codetrunk/)
+
+Codetrunk is a pastebin type website.
+
+Requirements:
+  Required python support compiled into vim as well as the mechanize library.
+
+Configure:
+  You need to setup a pastebin server either in your ~/.bash_profile or in your ~/.vimrc
+
+  ~/.bash_profile
+    export PASTEBIN='http://paste.example.com/'
+  ~/.vimrc
+    let g:pastebin='http://paste.example.com/'
+
+  Also you can configure your name that shows up. This is only configured in your ~/.vimrc
+    let g:pastebin_user="vim plugin"
+
+Useage:
+  Paste a selection of text/code:
+    :PasteCode
+    :PasteCodeM
+    :PasteCodeF
+
+  Paste the entire buffer:
+    :PasteFile
+    :PasteFileM
+    :PasteFileF
+
+  The default is to post for a day. The M and F suffixes allow you to post it Monthly and Forever respectively.
