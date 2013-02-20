@@ -29,7 +29,10 @@ endif
 
 python << EOF
 import vim
-import mechanize
+try:
+    import mechanize
+except:
+    pass
 
 def PasteMe(start=-1, end=-1, length='d'):
     # Get pastebin address
