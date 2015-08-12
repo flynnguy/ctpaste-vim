@@ -20,12 +20,12 @@ endif
 
 :vmap <leader>p :PasteCode<cr>
 
-:command -range             PasteCode :py PasteMe(<line1>,<line2>)
-:command -range             PasteCodeM :py PasteMe(<line1>,<line2>, length='m')
-:command -range             PasteCodeF :py PasteMe(<line1>,<line2>, length='f')
-:command                    PasteFile :py PasteMe()
-:command                    PasteFileM :py PasteMe(length='m')
-:command                    PasteFileF :py PasteMe(length='f')
+:command! -range             PasteCode :py PasteMe(<line1>,<line2>)
+:command! -range             PasteCodeM :py PasteMe(<line1>,<line2>, length='m')
+:command! -range             PasteCodeF :py PasteMe(<line1>,<line2>, length='f')
+:command!                    PasteFile :py PasteMe()
+:command!                    PasteFileM :py PasteMe(length='m')
+:command!                    PasteFileF :py PasteMe(length='f')
 
 python << EOF
 import vim
